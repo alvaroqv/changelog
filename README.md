@@ -36,6 +36,8 @@ Configuração
 Apresentar dependencia para outros MicroServiços ou do Monolito.*
 
 ![Diagrama de Contexto](https://github.com/alvaroqv/changelog/blob/master/diagrama_contexto.png)
+
+
 Exemplo de Utilização
 =============================
 > *Descrever como validar a configuração e instalação do Microserviço utilizando um exemplo de Jornada*
