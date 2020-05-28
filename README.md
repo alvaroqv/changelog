@@ -64,12 +64,12 @@ Contatos:
 =============================
 - Versão 1:
 
-DS Leader - Devan: devan.j.nack@bradesco.com.br - (41) XXXX-XXXX / Ramal: 34-XXXX
+DS Leader - Devan: devan.j.nack@XXXXX.com.br - (41) XXXX-XXXX / Ramal: 34-XXXX
 Squad - Nome da Squad 
 
 - Versão 2:
 
-DS Leader - Devan: devan.j.nack@bradesco.com.br - (41) XXXX-XXXX / Ramal: 34-XXXX
+DS Leader - Devan: devan.j.nack@XXXXXX.com.br - (41) XXXX-XXXX / Ramal: 34-XXXX
 Squad - Nome da Squad 
 
 
