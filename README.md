@@ -64,12 +64,12 @@ Contatos:
 =============================
 - Versão 1:
 
-DS Leader - Devan: devan.j.nack@bradesco.com.br - (41) 2107-6402 / Ramal: 34-6402
+DS Leader - Devan: devan.j.nack@bradesco.com.br - (41) XXXX-XXXX / Ramal: 34-XXXX
 Squad - Nome da Squad 
 
 - Versão 2:
 
-DS Leader - Devan: devan.j.nack@bradesco.com.br - (41) 2107-6402 / Ramal: 34-6402
+DS Leader - Devan: devan.j.nack@bradesco.com.br - (41) XXXX-XXXX / Ramal: 34-XXXX
 Squad - Nome da Squad 
 
 
