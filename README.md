@@ -5,27 +5,27 @@ Informação Geral
 =============================
 O componente de notificação é responsável pelo envio de notificações através de quatro canais para os clientes NEXT e não clientes. 
 
-** Serviço de Notificação
+* Serviço de Notificação
 As responsabilidades do Serviço de Notificação incluem:
-Gerenciando todos os metadados de notificação, incluindo as informações do evento de negócios que acionarão a notificação
-Gerenciando todas as informações que envolvem os modelos necessários no serviço de Gerenciamento de Modelos
-Conexão com serviços que enviam a mensagem pelo canal de destino, como SMS, Push, email
-Fornece uma trilha de auditoria de todas as notificações
-O Serviço de Notificação requer um estado de banco de dados de armazenamento de persistência para registrar metadados para cada notificação no sistema. Todas as informações de auditoria necessárias para as notificações também são armazenadas.
+   - Gerenciando todos os metadados de notificação, incluindo as informações do evento de negócios que acionarão a notificação
+   - Gerenciando todas as informações que envolvem os modelos necessários no serviço de Gerenciamento de Modelos
+   - Conexão com serviços que enviam a mensagem pelo canal de destino, como SMS, Push, email
+   - Fornece uma trilha de auditoria de todas as notificações
+   - O Serviço de Notificação requer um estado de banco de dados de armazenamento de persistência para registrar metadados para cada notificação no sistema. Todas as informações de auditoria necessárias para as notificações também são armazenadas.
 
 
-**Tipos de notificação
-***Email - notificação com corpo (HTML) e assunto (String) enviados para a caixa de entrada de email padrão do destinatário. Nexters e Non-Nexters podem receber.
-***SMS - notificação de texto enviada ao número de celular do destinatário. Nexters e Non-Nexters podem receber.
-***Notificação push-text enviada para um dispositivo Nexter. Pode ser visualizado mesmo se o cliente não estiver usando o aplicativo no momento, como em uma tela de telefone bloqueada.
-***No aplicativo - notificação de texto enviada para um Nexter. Só pode ser visualizado dentro do aplicativo, tanto no centro de notificações quanto em um cartão.
+- Tipos de notificação
+   - Email - notificação com corpo (HTML) e assunto (String) enviados para a caixa de entrada de email padrão do destinatário. Nexters e Non-Nexters podem receber.
+   - SMS - notificação de texto enviada ao número de celular do destinatário. Nexters e Non-Nexters podem receber.
+   - Notificação push-text enviada para um dispositivo Nexter. Pode ser visualizado mesmo se o cliente não estiver usando o aplicativo no momento, como em uma tela de telefone bloqueada.
+   - No aplicativo - notificação de texto enviada para um Nexter. Só pode ser visualizado dentro do aplicativo, tanto no centro de notificações quanto em um cartão.
 
 Entidades de banco de dados
-***BUSINESS_FUNCTION - define o conjunto de componentes que possui eventos de notificação. Pode ser usado, no futuro, para desativar um grupo de notificações.
-***BUSINESS_EVENT_TYPE - define todos os eventos de notificação que a plataforma pode manipular. BUSINESS_EVENT_NAME deve corresponder aos valores da enumeração definidos em BusinessEvent.java
-***BUS_EVENT_NOTIFICATION - define a notificação real para cada evento. É um relacionamento de 1 para muitos, pois um evento pode ter até 4 linhas nesta tabela, uma para cada tipo de notificação. Também controla se uma notificação específica por canal está ativa ou não (coluna ENABLED_IND).
-***IN_APP_MESSAGE - armazena todas as notificações no aplicativo com status.
-***SCHEDULED_NOTIFICATION - controla as notificações enviadas por lote para evitar o envio de duplicatas.
+   - BUSINESS_FUNCTION - define o conjunto de componentes que possui eventos de notificação. Pode ser usado, no futuro, para desativar um grupo de notificações.
+   - BUSINESS_EVENT_TYPE - define todos os eventos de notificação que a plataforma pode manipular. BUSINESS_EVENT_NAME deve corresponder aos valores da enumeração definidos em BusinessEvent.java
+   - BUS_EVENT_NOTIFICATION - define a notificação real para cada evento. É um relacionamento de 1 para muitos, pois um evento pode ter até 4 linhas nesta tabela, uma para cada tipo de notificação. Também controla se uma notificação específica por canal está ativa ou não (coluna ENABLED_IND).
+   - IN_APP_MESSAGE - armazena todas as notificações no aplicativo com status.
+   - SCHEDULED_NOTIFICATION - controla as notificações enviadas por lote para evitar o envio de duplicatas.
 
 
 
