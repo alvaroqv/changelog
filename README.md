@@ -31,7 +31,6 @@ Entidades de banco de dados
 
 Changelog
 =============================
-Agrupar mudanças descrevendo seus impactos no projeto, como segue:
 
 ## [03/06/2020]
 - [PB-1091] - Conforme alinhado anteriormente, seguem as alterações realizadas no microservice next-notification para o projeto JOY.
