@@ -53,7 +53,7 @@ Configuração
 > *Informações de configuração do projeto e dependencias.
 
 
-![Diagrama de Contexto](https://github.com/alvaroqv/changelog/blob/master/diagrama_notification.png)
+![Diagrama de Contexto](https://github.com/alvaroqv/changelog/blob/master/diagrama_notification-up.png)
 
 
 Exemplo de Utilização
