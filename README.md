@@ -3,6 +3,14 @@ Microserviço de Notificação
 
 Informação Geral
 =============================
+Documentação no Confluence:
+
+Template & Notification
+http://192.168.245.51:8090/pages/viewpage.action?pageId=55268671
+
+PROPOSED - Template & Notification Services
+http://192.168.245.51:8090/pages/viewpage.action?pageId=22686933
+
 O componente de notificação é responsável pelo envio de notificações através de quatro canais para os clientes NEXT e não clientes. 
 
 * Serviço de Notificação
