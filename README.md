@@ -6,34 +6,33 @@ Informação Geral
 > *Breve descrição negocial do projeto
 Incluir links para informações do projeto no Confluence e Jira se necessário*
 
-PreOnboarding - Microserviço com funcionalidades  para realizar o pré onboarding dos cliente no Next.
+Microservice de Notificação. 
 
 
 
 Changelog
 =============================
-> *Um changelog contém uma lista selecionada, ordenada cronologicamente, de mudanças significativas para cada versão de um projeto*
-
-
 Agrupar mudanças descrevendo seus impactos no projeto, como segue:
 
-## [Atual]
-- [PB-650] - Validação de SMS e E-mail na adesão.  EndPoint para gerar um código de verificação, a ser enviado via SMS e email, no início da adesão. Este código será utilizado pelo usuário do app para validar  o telefone e email informados no início da adesão. Documentação do PB: (https://pages.github.com/)
-
-### 3.X.X - (20-01-2019)
-- [PB-456] - Descrição da PB com link para documentação na pasta doc/ (https://pages.github.com/)
-
-### 2.X.X (20-01-2019) 
-- [PB-321] - Descrição da PB com link para documentação na pasta doc/ (https://pages.github.com/)
-
-### [1.X.X] - (20-01-2019 )
-- [PB-111] - Descrição da PB com link para documentação na pasta doc/ (https://pages.github.com/)
+## [03/06/2020]
+- [PB-1091] - Conforme alinhado anteriormente, seguem as alterações realizadas no microservice next-notification para o projeto JOY.
+Foram alterados/criados 4 endpoints no microservice next-notification, e são eles:
+[/v2/notification/inAppMessages] (Alterado)
+Esse endpoint passou a considerar para qual cliente a notificação PUSH deveria ser enviada, ou seja, para o Next ou para o JOY. A assinatura desse endpoint não foi alterada, então ele leva em consideração o ID do evento enviado no request e faz uma busca na nova tabela criada, chamada Application, para fazer essa distinção.  
+[ v3/notification/expressPushMessage (Criado)]
+Esse endpoint é novo e foi criado para ser utilizado diretamente pelo sistema de gestão. Ele faz o mesmo que o endpoint v2/notification/expressPushMessage, porém com um novo campo chamado applicationId, que é responsável por distinguir se a mensagem será enviada para o Next ou para o JOY (NEXT=1, JOY=2). O objetivo deste endpoint é mandar notificações PUSH para um CPF em específico enviado no request.
+[ v3/notification/expressPushMessage/list (Criado)]
+Esse endpoint é novo e foi criado para ser utilizado diretamente pelo sistema de gestão. Ele faz o mesmo que o endpoint 
+[v2/notification/expressPushMessage/list]
+porém com um novo campo chamado applicationId, que é responsável por distinguir se a mensagem será enviada para o Next ou para o JOY (NEXT=1, JOY=2). O objetivo deste endpoint é mandar notificações PUSH para uma lista de CPF’s informada no request.
+[v3/notification/expressPushMessage/all (Criado)]
+Esse endpoint é novo e foi criado para ser utilizado diretamente pelo sistema de gestão. Ele faz o mesmo que o endpoint [v2/notification/expressPushMessage/all], porém com um novo campo chamado applicationId, que é responsável por distinguir se a mensagem será enviada para o Next ou para o JOY (NEXT=1, JOY=2). O objetivo deste endpoint é mandar notificações PUSH para todos os clientes Next ou JOY.
 
 
 Configuração
 =============================
 > *Informações de configuração do projeto e dependencias.
-Apresentar dependencia para outros MicroServiços ou do Monolito.*
+
 
 ![Diagrama de Contexto](https://github.com/alvaroqv/changelog/blob/master/diagrama_contexto.png)
 
